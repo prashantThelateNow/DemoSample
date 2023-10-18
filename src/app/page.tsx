@@ -1,12 +1,21 @@
+import TypeAnimationWrapper from "@/components/shared/TypeAnimationWrapper";
 import Image from "next/image";
 import particleAnimation from "../../public/images/PARTICLE ANIMATION.gif";
 
 export default function Home() {
   return (
-    <div className="flex justify-between pr-12 py-12">
+    <div className="flex flex-col-reverse items-center lg:flex-row justify-between px-6 pr-12 py-12">
       <div className="max-w-2xl mt-7">
         <div className="text-mf-dark font-bold text-3xl tracking-wider leading-10">
-          Igniting Innovation through Open Source Collaboration: Mindfire | <span className="text-mf-red animate-typing">FOSS</span>
+          Igniting Innovation through Open Source Collaboration: Mindfire |{" "}
+          <TypeAnimationWrapper
+            sequence={[
+              "FOSS", // initially rendered starting point
+              2000,
+              "",
+            ]}
+          />
+          {/* <span className="text-mf-red animate-typing">FOSS</span> */}
         </div>
         <div className="text-mf-light-grey text-lg leading-6 mt-4 mb-10">
           A community pushing boundaries through open-source projects, fostering

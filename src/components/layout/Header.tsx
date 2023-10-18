@@ -1,26 +1,36 @@
+import  { navigations } from "@/constants";
 import Image from "next/image";
 import Link from "next/link";
 import mindfireFossLogo from "../../../public/images/mindfire_foss_logo.png";
 
 const Header = () => {
   return (
-    <nav className="py-2 flex justify-between items-center sticky z-50 top-0 bg-white">
+    <header className="px-6 py-2 flex justify-between md:items-center sticky z-50 top-0 bg-white">
       <Link href="/">
         <Image src={mindfireFossLogo} width="140" alt="logo" />
       </Link>
-      <div className="flex gap-20 items-center">
+      <div className="flex flex-col gap-2 md:flex-row md:gap-20 items-center">
         <div>
-          <ul className="flex space-x-5">
-            <li>
-              <Link href="/about" className="hover:text-blue-200">
-                About
-              </Link>
-            </li>
-            <li>
-              <Link href="/github" className="hover:text-blue-200">
-                GitHub
-              </Link>
-            </li>
+          <ul className="flex gap-9">
+            {navigations.map((navigation, index) =>
+              navigation.target ? (
+                <li key={index}>
+                  <Link
+                    href={navigation.path}
+                    className="hover:text-mf-light-grey"
+                    target={navigation.target}
+                  >
+                    {navigation.name}
+                  </Link>
+                </li>
+              ) : (
+                <li key={index}>
+                  <Link href={navigation.path} className="hover:text-mf-light-grey">
+                    {navigation.name}
+                  </Link>
+                </li>
+              )
+            )}
           </ul>
         </div>
         <button
@@ -30,7 +40,7 @@ const Header = () => {
           Join Us!
         </button>
       </div>
-    </nav>
+    </header>
   );
 };
 

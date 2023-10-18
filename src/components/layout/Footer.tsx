@@ -7,7 +7,7 @@ import twitter from "../../../public/images/social-media/twitter.png";
 
 const Footer = () => {
   return (
-    <div className="flex justify-between items-center py-5 text-sm">
+    <footer className="flex flex-col-reverse lg:flex-row gap-4 lg:justify-between items-center px-6 py-5 text-sm">
       <div>
         <span>@ 2023 </span>
         <Link href="https://www.mindfiredigitalllp.com/" target="_blank">
@@ -17,18 +17,19 @@ const Footer = () => {
         </Link>
         <span>. All Right Reserved</span>
       </div>
-      <div className="flex items-center gap-10">
+      <div className="flex flex-col md:flex-row md:items-center md:gap-10">
         <span>Privacy Policy</span>
         <span>Cookie Policy</span>
         <span>Terms of Use</span>
       </div>
-      <div className="flex gap-3">
+      <div className="h-[0.2px] bg-mf-light-grey w-full my-4 lg:hidden"></div>
+      <div className="flex flex-wrap gap-4">
         <Image src={facebook} height={24} width={24} alt="facebook_img" />
         <Image src={instagram} height={24} width={24} alt="instagram_img" />
         <Image src={twitter} height={24} width={24} alt="twitter_img" />
         <Image src={linkedIn} height={24} width={24} alt="linkedIn_img" />
       </div>
-    </div>
+    </footer>
   );
 };
 
