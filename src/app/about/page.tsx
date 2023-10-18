@@ -40,6 +40,7 @@ const About = () => {
             className="w-full h-auto lg:w-auto self-center"
             height={400}
             width={400}
+            priority
           />
         </div>
       </section>
