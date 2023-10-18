@@ -362,11 +362,15 @@
     font-display: swap
   } */
   
-  /* body { */
+  body {
     /* font-family: "Nunito Sans"; */
     /* line-height: 1.5; */
-    /* height: 100vh; */
-  /* } */
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    padding-left: 1.5rem/* 24px */;
+    padding-right: 1.5rem/* 24px */;
+  }
 
   @layer utilities {
     .hover-underline {
