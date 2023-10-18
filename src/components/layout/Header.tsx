@@ -1,21 +1,36 @@
+import Image from "next/image";
+import Link from "next/link";
+import mindfireFossLogo from "../../../public/images/mindfire_foss_logo.png";
+
 const Header = () => {
   return (
-    <header
-      className="py-20 px-24 text-center bg-[url('https://www.mindfiresolutions.com/home-assets/images/bg-home.webp')] bg-cover bg-no-repeat"
-      role="banner"
-    >
-      <h1 className="text-5.5xl font-bold mb-[1.6px]">
-        <p className="m-5 text-mindfire-text-black">
-        Mindfire | {" "}
-          <span className="text-mindfire-text-red">FOSS</span>
-        </p>
-      </h1>
-      <h2 className="text-xl font-bold max-w-[1076px] tracking-[-0.72px] mx-auto text-mindfire-text-black/70">
-        Official GitHub Page for Mindfire Digital LLP. Explore our projects,
-        contributions, and insights in technology, software development, and
-        more. Join us in our journey to push the boundaries of innovation.
-      </h2>
-    </header>
+    <nav className="py-2 flex justify-between items-center sticky z-50 top-0 bg-white">
+      <Link href="/">
+        <Image src={mindfireFossLogo} width="140" alt="logo" />
+      </Link>
+      <div className="flex gap-20 items-center">
+        <div>
+          <ul className="flex space-x-5">
+            <li>
+              <Link href="/about" className="hover:text-blue-200">
+                About
+              </Link>
+            </li>
+            <li>
+              <Link href="/github" className="hover:text-blue-200">
+                GitHub
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <button
+          type="button"
+          className="text-white bg-mf-red font-medium text-base rounded-full px-5 py-2 text-center tracking-wide"
+        >
+          Join Us!
+        </button>
+      </div>
+    </nav>
   );
 };
 
