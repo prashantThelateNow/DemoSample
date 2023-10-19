@@ -38,9 +38,9 @@ const About = () => {
           <Image
             src={aboutUsImage}
             alt="About us"
-            className="w-full h-auto lg:w-auto self-center"
-            height={400}
-            width={400}
+{/*             className="w-full h-auto lg:w-auto self-center" */}
+            height="400"
+            width="400"
             priority
           />
         </div>
