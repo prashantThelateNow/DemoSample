@@ -38,6 +38,7 @@ const About = () => {
           <Image
             src={aboutUsImage}
             alt="About us"
+            className="object-contain"
             height="400"
             width="400"
             priority
