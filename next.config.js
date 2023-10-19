@@ -15,6 +15,7 @@ module.exports = (phase, { defaultConfig }) => {
 
   return {
     output: "export",
+    basePath: "/DemoSample"
   };
 };
 
