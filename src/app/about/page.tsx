@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import AboutSegmentSection from "./components/AboutSegmentSection";
 import { missonSectionData, whyOpenSourceSectionData } from "@/constants";
+import aboutUsImage from "../../../public/images/about-us.jpg";
 
 const About = () => {
   return (
@@ -35,7 +36,7 @@ const About = () => {
             </div>
           </div>
           <Image
-            src="/images/about-us.jpg"
+            src={aboutUsImage}
             alt="About us"
             className="w-full h-auto lg:w-auto self-center"
             height={400}
