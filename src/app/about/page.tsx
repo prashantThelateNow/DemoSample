@@ -38,9 +38,9 @@ const About = () => {
           <Image
             src={aboutUsImage}
             alt="About us"
-            className="object-contain"
-            height="400"
-            width="400"
+            className='max-lg:w-full object-contain'
+            height="500"
+            width="600"
             priority
           />
         </div>
